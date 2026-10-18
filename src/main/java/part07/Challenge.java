@@ -12,6 +12,8 @@ package part07;
 // Your answer goes after the word return. You may add more lines above it.
 
 public class Challenge {
+    public static boolean canPlay(boolean homeworkDone, boolean isWeekend, int hour) { return
+            (homeworkDone || isWeekend) && hour < 8 && hour >= 21;
 
     // Problem 1 — canPlay
     // You can play video games if your homework is done OR it is the weekend,
@@ -23,8 +25,10 @@ public class Challenge {
     //   canPlay(false, false, 15)  → false   no homework done, not the weekend
     //   canPlay(true, true, 21)    → false   too late
     //   canPlay(true, false, 7)    → false   too early
-    public static boolean canPlay(boolean homeworkDone, boolean isWeekend, int hour) {
-        return false;   // YOUR CODE — use && and ||
+
+
+
+
     }
 
     // Problem 2 — digitCount
@@ -39,6 +43,18 @@ public class Challenge {
     // Hint: n / 10 chops off the last digit. 12345 / 10 is 1234.
     // Use a while loop that keeps chopping and counts how many times.
     public static int digitCount(int n) {
-        return 0;   // YOUR CODE — use a while loop
+        int count = 1;
+        while (n >= 10) {
+            n = n / 10;
+            count++;
+        }
+        return count;
+
+
     }
+
+
+
+
+
 }
