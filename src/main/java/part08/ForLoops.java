@@ -14,5 +14,14 @@ package part08;
 //    saying in YOUR OWN WORDS what that line does. The README shows an example.
 
 public class ForLoops {
-
+    // start of the program
+    public static void main(String[] args) {
+        // if i <= 10 you count up by +1 until you get to 10
+        for (int i = 0; i <= 10; i++) {
+            // system prints I which is each number after going through the loop
+            System.out.println(i);
+        }
+        // system outputs after the final number which is 10 Happy new year that is why this print statment is outside the loop.
+        System.out.println("Happy New Year!");
+    }
 }
