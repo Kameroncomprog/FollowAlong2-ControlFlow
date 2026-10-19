@@ -21,16 +21,43 @@ public class Challenge {
     // ticketPrice(19, true)  should return 7
     // ticketPrice(30, false) should return 10
     public static int ticketPrice(int age, boolean student) {
-        return 0;   // YOUR CODE
+        if (age < 5) { // Checks if the person is younger than 5
+            return 0; // Ticket is free
+
+        } else if (age >= 65) { // Checks if the person is 65 or older
+            return 5; // Ticket costs $5
+
+        } else if (student == true) { // Checks if the person is a student
+            return 7; // Ticket costs $7
+
+        } else { // Runs if none of the conditions are true
+            return 10; // Regular ticket costs $10
+        }
     }
 
-    // The letter grade for a score.
-    //   90 or more -> "A"    80 or more -> "B"    70 or more -> "C"
-    //   60 or more -> "D"    anything lower -> "F"
-    // letterGrade(95) should return "A"
-    // letterGrade(80) should return "B"
-    // letterGrade(59) should return "F"
-    public static String letterGrade(int score) {
-        return "";   // YOUR CODE
+        // The letter grade for a score.
+        //   90 or more -> "A"    80 or more -> "B"    70 or more -> "C"
+        //   60 or more -> "D"    anything lower -> "F"
+        // letterGrade(95) should return "A"
+        // letterGrade(80) should return "B"
+        // letterGrade(59) should return "F"
+        public static String letterGrade ( int score) {
+            if (score >= 90) { // Checks if score is 90 or higher
+                return "A"; // Returns A
+
+            } else if (score >= 80) { // Checks if score is 80 or higher
+                return "B"; // Returns B
+
+            } else if (score >= 70) { // Checks if score is 70 or higher
+                return "C"; // Returns C
+
+            } else if (score >= 60) { // Checks if score is 60 or higher
+                return "D"; // Returns D
+
+            } else { // Runs if score is below 60
+                return "F";
+            }
+        }
     }
-}
+
+
